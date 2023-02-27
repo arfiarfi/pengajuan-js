@@ -1,17 +1,19 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+
+// icons
 import { BiPlusCircle } from "react-icons/bi";
 
 export default function Modal() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
   return (
     <>
@@ -19,14 +21,14 @@ export default function Modal() {
         <button
           type="button"
           onClick={openModal}
-          className="text-4xl hover:text-white hover:text-5xl items-center duration-300"
+          className="text-4xl hover:text-white hover:text-5xl text-center items-center duration-300"
         >
           <BiPlusCircle />
         </button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10" onClose={openModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -100,7 +102,7 @@ export default function Modal() {
                       type="submit"
                       className="inline-flex justify-center rounded-md border border-transparent bg-[#A7727D] px-4 py-2 text-sm font-semibold"
                       // text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-                      onClick={closeModal}
+                      onClick={""}
                     >
                       Kurim Pengajuan
                     </button>

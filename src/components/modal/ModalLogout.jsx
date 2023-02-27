@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 // import { BiPlusCircle } from "react-icons/bi";
 
 export default function Modal() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);

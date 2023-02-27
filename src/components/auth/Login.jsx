@@ -1,6 +1,8 @@
 import React from "react";
-import { MdAlternateEmail, MdLock } from "react-icons/md";
 import { Link } from "react-router-dom";
+
+// icons
+import { MdAlternateEmail, MdLock } from "react-icons/md";
 import Register from "./Register";
 
 export default function Login() {
