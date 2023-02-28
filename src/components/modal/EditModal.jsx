@@ -1,8 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-// import { BiPlusCircle } from "react-icons/bi";
+import { MdDriveFileRenameOutline } from "react-icons/md";
 
-export default function ModalLogout() {
+export default function EditModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -19,9 +19,9 @@ export default function ModalLogout() {
         <button
           type="button"
           onClick={openModal}
-          className="flex h-[2rem] px-3 items-center rounded-full bg-[#F9F5E7] border-[1px] border-[#EDDBC7] hover:bg-[#EDDBC7] hover:border-[#F9F5E7] hover:shadow-md"
+          className="flex w-[2rem] h-[2rem] items-center justify-center rounded-full hover:text-white hover:bg-[#594545] duration-300 transition-all"
         >
-          <span className="text-base text-black font-semibold">Logout</span>
+          <MdDriveFileRenameOutline className="text-xl" />
         </button>
       </div>
 
@@ -51,20 +51,61 @@ export default function ModalLogout() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-xl bg-[#F9F5E7] border-[1px] p-5 text-left align-middle shadow-md transition-all">
-                  {/* <Dialog.Title
+                  <Dialog.Title
                     as="h3"
                     className="text-2xl font-bold leading-6 "
                   >
-                    Aju Pengaduan
-                  </Dialog.Title> */}
+                    Edit akun
+                  </Dialog.Title>
 
-                  <div className="flex items-center justify-center p-5">
-                    <span className="font-semibold text-xl">
-                      Apakah anda ingin logout?
-                    </span>
-                  </div>
+                  <form className="flex flex-col items-center p-3 gap-3">
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Frist Name</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan nama depan..."
+                        type="text"
+                      />
+                    </div>
 
-                  <div className="flex gap-5 py-3 items-center justify-center">
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Last Name</p>
+                      <textarea
+                        className="outline-none w-full rounded-md p-2 h-[2.5rem] min-h-[2.5rem]"
+                        placeholder="Masukan nama belakang..."
+                        type="textarea"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Password</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan password..."
+                        type="text"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">No. phone</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan no.telepon..."
+                        type="text"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Role</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan nama..."
+                        type="text"
+                      />
+                    </div>
+                  </form>
+
+                  <div className="flex gap-5 px-3">
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-[#A7727D] px-4 py-2 text-sm font-semibold"
@@ -78,9 +119,9 @@ export default function ModalLogout() {
                       type="submit"
                       className="inline-flex justify-center rounded-md border border-transparent bg-[#A7727D] px-4 py-2 text-sm font-semibold"
                       // text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-                      onClick={closeModal}
+                      onClick={""}
                     >
-                      Logout!
+                      Ubah akun!
                     </button>
                   </div>
                 </Dialog.Panel>

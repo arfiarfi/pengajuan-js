@@ -1,8 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-// import { BiPlusCircle } from "react-icons/bi";
+import { BsTrash } from "react-icons/bs";
 
-export default function ModalLogout() {
+export default function DeleteModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -19,9 +19,9 @@ export default function ModalLogout() {
         <button
           type="button"
           onClick={openModal}
-          className="flex h-[2rem] px-3 items-center rounded-full bg-[#F9F5E7] border-[1px] border-[#EDDBC7] hover:bg-[#EDDBC7] hover:border-[#F9F5E7] hover:shadow-md"
+          className="flex w-[2rem] h-[2rem] items-center justify-center rounded-full hover:text-white hover:bg-[#594545] duration-300 transition-all"
         >
-          <span className="text-base text-black font-semibold">Logout</span>
+          <BsTrash className=" text-xl" />
         </button>
       </div>
 
@@ -60,7 +60,7 @@ export default function ModalLogout() {
 
                   <div className="flex items-center justify-center p-5">
                     <span className="font-semibold text-xl">
-                      Apakah anda ingin logout?
+                      Apakah anda ingin menghapus data ini?
                     </span>
                   </div>
 
@@ -80,7 +80,7 @@ export default function ModalLogout() {
                       // text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
                       onClick={closeModal}
                     >
-                      Logout!
+                      Hapus!
                     </button>
                   </div>
                 </Dialog.Panel>

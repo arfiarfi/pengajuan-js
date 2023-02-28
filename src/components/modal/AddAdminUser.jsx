@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 // icons
 import { BiPlusCircle } from "react-icons/bi";
 
-export default function Modal() {
+export default function AddAdminUser() {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -21,10 +21,10 @@ export default function Modal() {
         <button
           type="button"
           onClick={openModal}
-          className="flex gap-2 ml-5 text-center items-center p-2 mb-2 w-[15rem] hover:pl-5 hover:bg-gradient-to-r from-[#9E7676] to-transparent hover:duration-300 transition-all rounded-l-full"
+          className="flex gap-2 text-center items-center p-1 mb-4 w-[15rem] hover:pl-5 hover:bg-gradient-to-r from-[#9E7676] to-transparent hover:duration-300 transition-all rounded-l-full"
         >
           <BiPlusCircle className="text-[1.5rem]" />
-          <span className="font-medium">Buat pengaduan</span>
+          <span className="font-medium">Add account</span>
         </button>
       </div>
 
@@ -58,35 +58,54 @@ export default function Modal() {
                     as="h3"
                     className="text-2xl font-bold leading-6 "
                   >
-                    Aju Pengaduan
+                    Membuat akun baru
                   </Dialog.Title>
 
                   <form className="flex flex-col items-center p-3 gap-3">
                     <div className="flex flex-col gap-2 w-full">
-                      <p className="text-base font-semibold">Nama</p>
+                      <p className="text-base font-semibold">Frist Name</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan nama depan..."
+                        type="text"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Last Name</p>
+                      <textarea
+                        className="outline-none w-full rounded-md p-2 h-[2.5rem] min-h-[2.5rem]"
+                        placeholder="Masukan nama belakang..."
+                        type="textarea"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Password</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan password..."
+                        type="text"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">No. phone</p>
+                      <input
+                        className="outline-none w-full rounded-md px-2 h-[2.5rem]"
+                        placeholder="Masukan no.telepon..."
+                        type="text"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <p className="text-base font-semibold">Role</p>
                       <input
                         className="outline-none w-full rounded-md px-2 h-[2.5rem]"
                         placeholder="Masukan nama..."
                         type="text"
                       />
                     </div>
-
-                    <div className="flex flex-col gap-2 w-full">
-                      <p className="text-base font-semibold">Pengajuan</p>
-                      <textarea
-                        className="outline-none w-full rounded-md p-2 h-[2.5rem] min-h-[2.5rem]"
-                        placeholder="Masukan ajuan..."
-                        type="textarea"
-                      />
-                    </div>
-
-                    <label class="block">
-                      <span class="sr-only">Kirim Gambar</span>
-                      <input
-                        type="file"
-                        class="block w-full text-md text-gray-500 file:duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#EDDBC7] hover:file:bg-[#A7727D]"
-                      />
-                    </label>
                   </form>
 
                   <div className="flex gap-5 px-3">
@@ -105,7 +124,7 @@ export default function Modal() {
                       // text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
                       onClick={""}
                     >
-                      Kurim Pengajuan
+                      Buat akun!
                     </button>
                   </div>
                 </Dialog.Panel>

@@ -11,7 +11,6 @@ const User = (isOpen, setIsOpen) => {
         {/* Top Bar */}
         <div className="h-[4rem] w-full rounded-lg bg-[#A7727D] flex items-center px-8 justify-between  border-[1px] border-[#EDDBC7] shadow-md">
           <div className="flex gap-5 items-center">
-            <Modal />
             <h2 className="font-bold text-3xl text-center">Lapamas</h2>
           </div>
 
@@ -23,6 +22,8 @@ const User = (isOpen, setIsOpen) => {
             <ModalLog />
           </div>
         </div>
+
+        <Modal />
 
         <div className="flex flex-wrap gap-3 max-w-full min-h-full content-start justify-center">
           <div className="flex flex-col gap-2 bg-[#F8EAD8] rounded-md max-w-[30vw] p-2 ">
